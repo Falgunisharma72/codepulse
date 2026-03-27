@@ -87,11 +87,6 @@ cd codepulse
 docker compose up --build
 ```
 
-The app will be available at:
-- **Dashboard**: http://localhost:3000
-- **API**: http://localhost:8080
-- **Swagger UI**: http://localhost:8080/swagger-ui.html
-
 ### Running Locally (development)
 
 1. Start PostgreSQL and Redis:
