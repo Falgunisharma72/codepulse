@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codepulse
+    username: codepulse
+    password: codepulse
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+codepulse:
+  analysis:
+    clone-dir: /tmp/codepulse-repos
+    max-file-size-kb: 500
+    supported-languages:
+      - java
+      - python
+      - javascript
+    timeout-seconds: 300
+  queue:
+    channel: analysis-jobs
+  thresholds:
+    default-max-complexity: 10
+    default-max-method-length: 30
+    default-max-file-length: 300
+    default-max-nesting-depth: 4
+    default-min-health-score: 70.0
+
+server:
+  port: 8080

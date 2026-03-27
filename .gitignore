@@ -1,0 +1,43 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment
+.env
+*.env.local
+
+# Node
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+
+# Docker
+docker-compose.override.yml
+
+# Temp
+/tmp/

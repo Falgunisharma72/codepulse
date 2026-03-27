@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/codepulse_test
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+codepulse:
+  analysis:
+    clone-dir: /tmp/codepulse-test-repos
+    timeout-seconds: 60
